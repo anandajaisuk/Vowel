@@ -1,2 +1,5 @@
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install Flask
+pip install keras
+pip install Pillow
+pip install tensorflow
