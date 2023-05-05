@@ -3,3 +3,4 @@ pip install Flask
 pip install keras
 pip install Pillow
 pip install tensorflow
+pip install gunicorn
