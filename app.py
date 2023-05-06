@@ -2,9 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import base64
 import io
 from PIL import Image
-import tensorflow as tf
 import numpy as np
-
+import keras.models
 
 import time
 
@@ -32,10 +31,10 @@ def f1_m(y_true, y_pred):
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
 with custom_object_scope({'precision_m': precision_m, 'recall_m': recall_m, 'f1_m': f1_m}):
-    model = tf.keras.models.load_model('aeou_model.h5')
+    model = keras.models.load_model('aeou_model.h5')
 
 with custom_object_scope({'precision_m': precision_m, 'recall_m': recall_m, 'f1_m': f1_m}):
-    model_conf = tf.keras.models.load_model('aeou_model_conf.h5')
+    model_conf = keras.models.load_model('aeou_model_conf.h5')
 
 
 # Define the image size and channels for the input to the model
