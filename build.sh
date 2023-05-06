@@ -3,5 +3,5 @@ pip install Flask
 pip install keras
 pip install keras-utils
 pip install Pillow
-pip install tensorflow-cpu==2.7.0
+pip install tensorflow-cpu
 pip install gunicorn
