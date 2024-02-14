@@ -6,7 +6,7 @@ COPY requirements.txt requirements.txt
 
 RUN pip3 install --upgrade pip
 
-RUN python3 -m pip install tensorflow[and-cuda]
+RUN python3 -m pip install tensorflow
 
 RUN pip3 install -r requirements.txt
 
